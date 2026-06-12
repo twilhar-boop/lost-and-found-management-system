@@ -148,6 +148,14 @@ CREATE TABLE `users` (
 --
 
 --
+-- Insert default users
+--
+
+INSERT INTO `users` (`user_id`, `username`, `password_hash`, `role`, `email`) VALUES
+(1, 'admin', '$2y$10$LXDRp.e7.FO28LycOFTcI.mQKPBykjZx1xf6a3zaeJ.iRPH5.5Ofa', 'admin', 'admin@gmail.com'),
+(2, 'user1', '$2y$10$PHp7IG4Hp8GRjfjJD6Fpju6we/WbcnyEZkYNdbhFl..i1iEjQVtZC', 'user', 'user1@gmail.com');
+
+--
 -- Indexes for table `claims`
 --
 ALTER TABLE `claims`
@@ -261,7 +269,7 @@ ALTER TABLE `reports`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
